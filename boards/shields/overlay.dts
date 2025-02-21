@@ -1,0 +1,18 @@
+&i2c1 {
+    compatible = "nordic,nrf-twim";
+    status = "okay";
+    sda-pin = <6>;   // Adjust if needed
+    scl-pin = <7>;   // Adjust if needed
+
+    oled_left: oled_left@3C {
+        compatible = "ssd1306";
+        reg = <0x3C>;
+        label = "OLED_LEFT";
+    };
+
+    oled_right: oled_right@3D {
+        compatible = "ssd1306";
+        reg = <0x3D>;
+        label = "OLED_RIGHT";
+    };
+};
